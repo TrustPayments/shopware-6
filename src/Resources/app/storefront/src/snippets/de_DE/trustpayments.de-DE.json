@@ -1,0 +1,11 @@
+{
+  "trustpayments": {
+    "payHeader": "Bestellung bezahlen",
+    "payButton": "Zahlen"
+  },
+  "cookie": {
+    "trustpayments": {
+      "name": "TrustPayments-Zahlungen"
+    }
+  }
+}
