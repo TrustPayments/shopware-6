@@ -43,6 +43,7 @@ class TrustPaymentsPayment extends Plugin {
 			'api/refund.xml',
 			'api/transaction.xml',
 			'api/webhooks.xml',
+			'storefront/account.xml',
 			'storefront/checkout.xml',
 			'checkout.xml',
 			'settings.xml',

@@ -38,7 +38,7 @@ class TrustPaymentsCookieProvider implements CookieProviderInterface {
 			}
 
 			$cookie['entries'][] = [
-				'snippet_name' => 'cookie.trustpayments.name',
+				'snippet_name' => 'trustpayments.cookie.name',
 				'cookie'       => 'trustpayments-cookie-key',
 			];
 		}

@@ -1,11 +1,12 @@
 {
   "trustpayments": {
-    "payHeader": "Pay order",
-    "payButton": "Pay"
-  },
-  "cookie": {
-    "trustpayments": {
-      "name": "TrustPayments Payment"
-    }
+	"account": {
+	  "downloadInvoice": "Download Invoice"
+	},
+	"cookie": {
+	  "name": "TrustPayments Payment"
+	},
+	"payButton": "Pay",
+	"payHeader": "Pay order"
   }
 }
