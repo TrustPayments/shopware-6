@@ -6,7 +6,7 @@ The TrustPayments Payment plugin wraps around the TrustPayments API. This librar
 ## Requirements
 
 - PHP 7.2 and above
-- Shopware 6.2
+- Shopware 6.2 and above
 
 ## Installation
 
@@ -22,13 +22,15 @@ Once composer is installed, execute the following command in your project root t
 
 ```bash
 composer require trustpayments/shopware-6
-php bin/console plugin:install --refresh --activate --clearCache TrustPaymentsPayment
+php bin/console plugin:refresh
+php bin/console plugin:install --activate --clearCache TrustPaymentsPayment
 ```
 
 #### Update via composer
 ```bash
 composer update trustpayments/shopware-6
-php bin/console plugin:install --refresh --activate --clearCache TrustPaymentsPayment
+php bin/console plugin:refresh
+php bin/console plugin:install --activate --clearCache TrustPaymentsPayment
 ```
 
 ### Manual Installation
@@ -40,7 +42,8 @@ Uncompress the zip file you download, and include the autoloader in your project
 ```bash
 # unzip to ShopwareInstallDir/custom/plugins/TrustPaymentsPayment
 composer require trustpayments/sdk 2.1.2
-php bin/console plugin:install --refresh --activate --clearCache TrustPaymentsPayment
+php bin/console plugin:refresh
+php bin/console plugin:install --activate --clearCache TrustPaymentsPayment
 ```
 
 ## Usage
@@ -49,7 +52,7 @@ account dashboard.
 
 ## Documentation
 
-[Documentation](https://plugin-documentation.ep.trustpayments.com/TrustPayments/shopware-6/1.1.20/docs/en/documentation.html)
+[Documentation](https://plugin-documentation.ep.trustpayments.com/TrustPayments/shopware-6/1.1.21/docs/en/documentation.html)
 
 ## License
 
