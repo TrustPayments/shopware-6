@@ -92,7 +92,8 @@ class CheckoutSubscriber implements EventSubscriberInterface {
 
 			if (
 				!$emailOriginIsTrustPaymentsPayment &&
-				TrustPaymentsPaymentHandler::class == $order->getTransactions()->first()->getPaymentMethod()->getHandlerIdentifier()
+				$order->getTransactions()->last()->getPaymentMethod() &&
+				TrustPaymentsPaymentHandler::class == $order->getTransactions()->last()->getPaymentMethod()->getHandlerIdentifier()
 			) {
 				$event->getContext()->addExtension('trustpayments-disable', new ArrayStruct());
 				$event->stopPropagation();

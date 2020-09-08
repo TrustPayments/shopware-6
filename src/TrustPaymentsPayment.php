@@ -6,12 +6,15 @@ use Shopware\Core\{
 	Framework\Plugin,
 	Framework\Plugin\Context\ActivateContext,
 	Framework\Plugin\Context\DeactivateContext,
-	Framework\Plugin\Context\UninstallContext};
+	Framework\Plugin\Context\UninstallContext,
+	Framework\Plugin\Context\UpdateContext,};
 use Symfony\Component\{
 	Config\FileLocator,
 	DependencyInjection\ContainerBuilder,
 	DependencyInjection\Loader\XmlFileLoader,};
-use TrustPaymentsPayment\Core\Util\Traits\TrustPaymentsPaymentPluginTrait;
+use TrustPaymentsPayment\Core\{
+	Api\WebHooks\Service\WebHooksService,
+	Util\Traits\TrustPaymentsPaymentPluginTrait};
 
 
 // expect the vendor folder on Shopware store releases
@@ -81,6 +84,24 @@ class TrustPaymentsPayment extends Plugin {
 	{
 		parent::deactivate($deactivateContext);
 		$this->disablePaymentMethods($deactivateContext->getContext());
+	}
+
+
+	/**
+	 * @param \Shopware\Core\Framework\Plugin\Context\UpdateContext $updateContext
+	 *
+	 * @throws \TrustPayments\Sdk\ApiException
+	 * @throws \TrustPayments\Sdk\Http\ConnectionException
+	 * @throws \TrustPayments\Sdk\VersioningException
+	 */
+	public function postUpdate(UpdateContext $updateContext): void
+	{
+		parent::postUpdate($updateContext);
+		/**
+		 * @var \TrustPaymentsPayment\Core\Api\WebHooks\Service\WebHooksService $webHooksService
+		 */
+		$webHooksService = $this->container->get(WebHooksService::class);
+		$webHooksService->install();
 	}
 
 }

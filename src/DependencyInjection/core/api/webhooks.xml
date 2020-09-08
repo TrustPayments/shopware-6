@@ -29,7 +29,7 @@
 		</service>
 
 		<!-- Services -->
-		<service id="TrustPaymentsPayment\Core\Api\WebHooks\Service\WebHooksService">
+		<service id="TrustPaymentsPayment\Core\Api\WebHooks\Service\WebHooksService" public="true">
 			<argument type="service" id="TrustPaymentsPayment\Core\Settings\Service\SettingsService"/>
 			<argument type="service" id="router.default"/>
 			<call method="setLogger">
