@@ -5,10 +5,10 @@ import constants from '../../page/trustpayments-settings/configuration-constants
 
 const {Component, Mixin} = Shopware;
 
-Component.register('sw-trustpayments-options', {
+Component.register('sw-trustpayments-storefront-options', {
 	template: template,
 
-	name: 'TrustPaymentsOptions',
+	name: 'TrustPaymentsStorefrontOptions',
 
 	mixins: [
 		Mixin.getByName('notification')
@@ -39,18 +39,6 @@ Component.register('sw-trustpayments-options', {
 	},
 
 	computed: {
-		integrationOptions() {
-			return [
-				{
-					id: 'iframe',
-					name: this.$tc('trustpayments-settings.settingForm.options.integration.options.iframe')
-				},
-				{
-					id: 'payment_page',
-					name: this.$tc('trustpayments-settings.settingForm.options.integration.options.payment_page')
-				}
-			];
-		}
 	},
 
 	methods: {

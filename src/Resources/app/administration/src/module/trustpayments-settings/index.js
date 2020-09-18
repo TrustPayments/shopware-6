@@ -5,6 +5,7 @@ import './extension/sw-settings-index';
 import './page/trustpayments-settings';
 import './component/sw-trustpayments-credentials';
 import './component/sw-trustpayments-options';
+import './component/sw-trustpayments-storefront-options';
 import enGB from './snippet/en-GB.json';
 import deDE from './snippet/de-DE.json';
 

@@ -1,7 +1,7 @@
 /* global Shopware */
 
-import template from './trustpayments-credentials.html.twig';
-import constants from '../../page/trustpayments-settings/trustpayments-config-consts'
+import template from './index.html.twig';
+import constants from '../../page/trustpayments-settings/configuration-constants'
 
 const {Component, Mixin} = Shopware;
 
