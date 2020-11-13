@@ -3,8 +3,8 @@
 import '../../component/trustpayments-order-action-completion';
 import '../../component/trustpayments-order-action-refund';
 import '../../component/trustpayments-order-action-void';
-import template from './trustpayments-order-detail.html.twig';
-import './trustpayments-order-detail.scss';
+import template from './index.html.twig';
+import './index.scss';
 
 const {Component, Mixin, Filter, Context, Utils} = Shopware;
 const Criteria = Shopware.Data.Criteria;

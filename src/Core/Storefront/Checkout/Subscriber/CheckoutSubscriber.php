@@ -88,13 +88,15 @@ class CheckoutSubscriber implements EventSubscriberInterface {
 			 * @var $order OrderEntity
 			 */
 			$order                                     = $templateData['order'];
-			$emailOriginIsTrustPaymentsPayment = isset($templateData[OrderMailService::EMAIL_ORIGIN_IS_TRUSTPAYMENTS]);
+			$isTrustPaymentsEmail = isset($templateData[OrderMailService::EMAIL_ORIGIN_IS_TRUSTPAYMENTS]);
 
 			if (
-				!$emailOriginIsTrustPaymentsPayment &&
+				$this->settingsService->getSettings($order->getSalesChannelId())->isEmailEnabled() &&
+				!$isTrustPaymentsEmail &&
 				$order->getTransactions()->last()->getPaymentMethod() &&
 				TrustPaymentsPaymentHandler::class == $order->getTransactions()->last()->getPaymentMethod()->getHandlerIdentifier()
 			) {
+				$this->logger->info('Email disabled for ', ['orderId' => $order->getId()]);
 				$event->getContext()->addExtension('trustpayments-disable', new ArrayStruct());
 				$event->stopPropagation();
 			}
