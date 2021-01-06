@@ -6,7 +6,7 @@ The TrustPayments Payment plugin wraps around the TrustPayments API. This librar
 ## Requirements
 
 - PHP 7.2 and above
-- Shopware 6.2 and above
+- Shopware 6.2.3 and above
 
 ## Installation
 
@@ -59,7 +59,7 @@ tail -f var/log/trustpayments_payment*.log
 
 ## Documentation
 
-[Documentation](https://plugin-documentation.ep.trustpayments.com/TrustPayments/shopware-6/1.4.1/docs/en/documentation.html)
+[Documentation](https://plugin-documentation.ep.trustpayments.com/TrustPayments/shopware-6/1.4.2/docs/en/documentation.html)
 
 ## License
 
