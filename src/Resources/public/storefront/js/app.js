@@ -99,8 +99,9 @@
                     let loader = document.getElementById(TrustPaymentsCheckout.loader_id);
                     loader.parentNode.removeChild(loader);
                     TrustPaymentsCheckout.activateLoader(false);
-                    const iframe = document.getElementById(TrustPaymentsCheckout.payment_method_iframe_id).getElementsByTagName('iframe')[0];
-                    if(iframe.clientHeight < 1){ // iframe has no fields
+                });
+                TrustPaymentsCheckout.handler.setHeightChangeCallback((height)=>{
+                    if(height < 1){ // iframe has no fields
                         TrustPaymentsCheckout.handler.submit();
                     }
                 });
