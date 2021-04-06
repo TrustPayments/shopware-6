@@ -7,14 +7,13 @@ use Shopware\Core\{
 	Framework\Plugin\Context\ActivateContext,
 	Framework\Plugin\Context\DeactivateContext,
 	Framework\Plugin\Context\UninstallContext,
-	Framework\Plugin\Context\UpdateContext,};
-use Symfony\Component\{
-	Config\FileLocator,
-	DependencyInjection\ContainerBuilder,
-	DependencyInjection\Loader\XmlFileLoader,};
+	Framework\Plugin\Context\UpdateContext
+};
 use TrustPaymentsPayment\Core\{
 	Api\WebHooks\Service\WebHooksService,
-	Util\Traits\TrustPaymentsPaymentPluginTrait};
+	Util\Traits\TrustPaymentsPaymentPluginTrait
+};
+
 
 // expect the vendor folder on Shopware store releases
 if (file_exists(dirname(__DIR__) . '/vendor/autoload.php')) {
