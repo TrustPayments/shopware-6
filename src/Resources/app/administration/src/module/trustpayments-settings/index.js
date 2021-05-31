@@ -1,13 +1,11 @@
 /* global Shopware */
 
-import './extension/sw-plugin';
-import './extension/sw-settings-index';
+import './acl';
 import './page/trustpayments-settings';
 import './component/sw-trustpayments-credentials';
 import './component/sw-trustpayments-options';
+import './component/sw-trustpayments-settings-icon';
 import './component/sw-trustpayments-storefront-options';
-import enGB from './snippet/en-GB.json';
-import deDE from './snippet/de-DE.json';
 
 const {Module} = Shopware;
 
@@ -16,22 +14,28 @@ Module.register('trustpayments-settings', {
 	name: 'TrustPayments',
 	title: 'trustpayments-settings.general.descriptionTextModule',
 	description: 'trustpayments-settings.general.descriptionTextModule',
-	color: '#62ff80',
+	color: '#28d8ff',
 	icon: 'default-action-settings',
-
-	snippets: {
-		'de-DE': deDE,
-		'en-GB': enGB
-	},
+	version: '1.0.0',
+	targetVersion: '1.0.0',
 
 	routes: {
 		index: {
 			component: 'trustpayments-settings',
 			path: 'index',
 			meta: {
-				parentPath: 'sw.settings.index'
+				parentPath: 'sw.settings.index',
+				privilege: 'trustpayments.viewer'
 			}
 		}
+	},
+
+	settingsItem: {
+		group: 'plugins',
+		to: 'trustpayments.settings.index',
+		iconComponent: 'sw-trustpayments-settings-icon',
+		backgroundEnabled: true,
+		privilege: 'trustpayments.viewer'
 	}
 
 });

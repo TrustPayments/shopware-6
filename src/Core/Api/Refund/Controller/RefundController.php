@@ -70,7 +70,7 @@ class RefundController extends AbstractController {
 	 * @throws \TrustPayments\Sdk\Http\ConnectionException
 	 * @throws \TrustPayments\Sdk\VersioningException
 	 * @Route(
-	 *     "/api/v{version}/_action/trustpayments/refund/create-refund/",
+	 *     "/api/_action/trustpayments/refund/create-refund/",
 	 *     name="api.action.trustpayments.refund.create-refund",
 	 *     methods={"POST"}
 	 *     )

@@ -62,7 +62,7 @@ class TransactionVoidController extends AbstractController {
 	 * @throws \TrustPayments\Sdk\VersioningException
 	 *
 	 * @Route(
-	 *     "/api/v{version}/_action/trustpayments/transaction-void/create-transaction-void/",
+	 *     "/api/_action/trustpayments/transaction-void/create-transaction-void/",
 	 *     name="api.action.trustpayments.transaction-void.create-transaction-void",
 	 *     methods={"POST"}
 	 *     )

@@ -222,7 +222,6 @@ Component.register('trustpayments-order-detail', {
 		downloadPackingSlip() {
 			window.open(
 				this.TrustPaymentsTransactionService.getPackingSlip(
-					Shopware.Context.api,
 					this.transaction.metaData.salesChannelId,
 					this.transaction.id
 				),
@@ -233,7 +232,6 @@ Component.register('trustpayments-order-detail', {
 		downloadInvoice() {
 			window.open(
 				this.TrustPaymentsTransactionService.getInvoiceDocument(
-					Shopware.Context.api,
 					this.transaction.metaData.salesChannelId,
 					this.transaction.id
 				),

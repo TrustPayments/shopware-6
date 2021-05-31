@@ -1,10 +1,6 @@
-{% block sw_settings_content_card_slot_plugins %}
-	{% parent %}
-	<sw-settings-item :label="$tc('trustpayments-settings.general.mainMenuItemGeneral')"
-					  :to="{ name: 'trustpayments.settings.index' }"
-					  :backgroundEnabled="false">
-		<template #icon>
-			<svg xmlns="http://www.w3.org/2000/svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" contentScriptType="text/ecmascript" zoomAndPan="magnify" contentStyleType="text/css" id="svg2" sodipodi:docname="favicon.svg" version="1.1" width="11.060362mm" preserveAspectRatio="xMidYMid meet" inkscape:version="0.91 r13725" viewBox="0 0 39.190259 41.490075" height="11.709421mm">
+{% block trustpayments_settings_icon %}
+    <span class="sw-icon icon--trustpayments-multicolor sw-icon--multicolor">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" contentScriptType="text/ecmascript" zoomAndPan="magnify" contentStyleType="text/css" id="svg2" sodipodi:docname="favicon.svg" version="1.1" width="11.060362mm" preserveAspectRatio="xMidYMid meet" inkscape:version="0.91 r13725" viewBox="0 0 39.190259 41.490075" height="11.709421mm">
   <defs id="defs4"/>
   <sodipodi:namedview fit-margin-left="0" bordercolor="#666666" inkscape:window-height="1503" inkscape:zoom="15.839192" id="base" fit-margin-top="0" inkscape:current-layer="layer1" inkscape:window-y="27" inkscape:cy="25.310826" inkscape:window-x="0" inkscape:cx="30.849409" fit-margin-bottom="0" showgrid="false" fit-margin-right="0" inkscape:pageopacity="0.0" inkscape:document-units="px" inkscape:pageshadow="2" inkscape:window-width="2560" inkscape:window-maximized="1" borderopacity="1.0" pagecolor="#ffffff"/>
   <metadata id="metadata7">
@@ -23,6 +19,5 @@
   </g>
 </svg>
 
-		</template>
-	</sw-settings-item>
+    </span>
 {% endblock %}

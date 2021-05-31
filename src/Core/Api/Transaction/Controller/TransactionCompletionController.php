@@ -63,7 +63,7 @@ class TransactionCompletionController extends AbstractController {
 	 * @throws \TrustPayments\Sdk\VersioningException
 	 *
 	 * @Route(
-	 *     "/api/v{version}/_action/trustpayments/transaction-completion/create-transaction-completion/",
+	 *     "/api/_action/trustpayments/transaction-completion/create-transaction-completion/",
 	 *     name="api.action.trustpayments.transaction-completion.create-transaction-completion",
 	 *     methods={"POST"}
 	 *     )

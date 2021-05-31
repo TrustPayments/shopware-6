@@ -184,7 +184,7 @@ class WebHookController extends AbstractController {
 	 *
 	 * @return \Symfony\Component\HttpFoundation\JsonResponse|\Symfony\Component\HttpFoundation\Response
 	 * @Route(
-	 *     "/api/v{version}/_action/trustpayments/webHook/callback/{salesChannelId}",
+	 *     "/api/_action/trustpayments/webHook/callback/{salesChannelId}",
 	 *     name="api.action.trustpayments.webhook.update",
 	 *     options={"seo": "false"},
 	 *     defaults={"csrf_protected"=false, "XmlHttpRequest"=true, "auth_required"=false},
