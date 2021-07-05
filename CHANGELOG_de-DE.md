@@ -1,3 +1,9 @@
+# 4.0.2
+- Der Name der Versand-Einzelposten wurde korrigiert
+
+# 4.0.1
+- Feste Steuerberechnung für kundenspezifische Produkte
+
 # 4.0.0
 - Unterstützung für Shopware 6.4
 
