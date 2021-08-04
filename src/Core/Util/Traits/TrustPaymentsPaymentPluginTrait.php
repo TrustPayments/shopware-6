@@ -102,6 +102,6 @@ trait TrustPaymentsPaymentPluginTrait {
 	{
 		$connection = $this->container->get(Connection::class);
 		$query = 'ALTER TABLE `order` DROP COLUMN `trustpayments_lock`;';
-		$connection->executeQuery($query);
+		$connection->executeStatement($query);
 	}
 }
