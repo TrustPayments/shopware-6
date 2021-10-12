@@ -58,22 +58,4 @@ class TrustPaymentsPayment extends Plugin {
 		$this->disablePaymentMethods($deactivateContext->getContext());
 	}
 
-
-	/**
-	 * @param \Shopware\Core\Framework\Plugin\Context\UpdateContext $updateContext
-	 *
-	 * @throws \TrustPayments\Sdk\ApiException
-	 * @throws \TrustPayments\Sdk\Http\ConnectionException
-	 * @throws \TrustPayments\Sdk\VersioningException
-	 */
-	public function postUpdate(UpdateContext $updateContext): void
-	{
-		parent::postUpdate($updateContext);
-		/**
-		 * @var \TrustPaymentsPayment\Core\Api\WebHooks\Service\WebHooksService $webHooksService
-		 */
-		$webHooksService = $this->container->get(WebHooksService::class);
-		$webHooksService->install();
-	}
-
 }
