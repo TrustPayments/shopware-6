@@ -3,12 +3,12 @@
 namespace TrustPaymentsPayment\Core\Util\Payload;
 
 use TrustPayments\Sdk\{
+	Model\LineItem,
 	Model\RefundCreate,
 	Model\RefundType,
 	Model\Transaction,
 	Model\TransactionState};
 use TrustPaymentsPayment\Core\Util\Exception\InvalidPayloadException;
-use Wallee\Sdk\Model\LineItem;
 
 /**
  * Class RefundPayload

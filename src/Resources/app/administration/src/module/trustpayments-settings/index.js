@@ -6,6 +6,7 @@ import './component/sw-trustpayments-credentials';
 import './component/sw-trustpayments-options';
 import './component/sw-trustpayments-settings-icon';
 import './component/sw-trustpayments-storefront-options';
+import './component/sw-trustpayments-advanced-options';
 
 const {Module} = Shopware;
 
