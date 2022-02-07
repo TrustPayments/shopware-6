@@ -5,6 +5,15 @@
 			<template #grid>
 				{% block trustpayments_order_actions_section %}
 				<sw-card-section secondary slim>
+					{% block trustpayments_order_transaction_refunds_action_button %}
+						<sw-button
+								variant="primary"
+								size="small"
+								:disabled="transaction.state != 'FULFILL' || refundableAmount <= 0"
+								@click="spawnModal('refundByAmount')">
+							{{ $tc('trustpayments-order.buttons.label.refund') }}
+						</sw-button>
+					{% endblock %}
 					{% block trustpayments_order_transaction_completion_action_button %}
 					<sw-button
 							variant="primary"
@@ -117,6 +126,15 @@
 				:lineItems="lineItems"
 				@modal-close="closeModal">
 		</trustpayments-order-action-refund>
+		{% endblock %}
+		{% block trustpayments_order_actions_modal_refund_by_amount %}
+			<trustpayments-order-action-refund-by-amount
+					v-if="modalType === 'refundByAmount'"
+					:orderId="orderId"
+					:transactionData="transactionData"
+					:lineItems="lineItems"
+					@modal-close="closeModal">
+			</trustpayments-order-action-refund-by-amount>
 		{% endblock %}
 		{% block trustpayments_order_actions_modal_completion%}
 		<trustpayments-order-action-completion

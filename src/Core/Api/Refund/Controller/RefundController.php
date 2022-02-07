@@ -90,4 +90,32 @@ class RefundController extends AbstractController {
 
 		return new Response(null, Response::HTTP_NO_CONTENT);
 	}
+
+	/**
+	 * @param \Symfony\Component\HttpFoundation\Request $request
+	 * @param \Shopware\Core\Framework\Context          $context
+	 * @return \Symfony\Component\HttpFoundation\Response
+	 * @throws \TrustPayments\Sdk\ApiException
+	 * @throws \TrustPayments\Sdk\Http\ConnectionException
+	 * @throws \TrustPayments\Sdk\VersioningException
+	 * @Route(
+	 *     "/api/_action/trustpayments/refund/create-refund-by-amount/",
+	 *     name="api.action.trustpayments.refund.create.refund.by.amount",
+	 *     methods={"POST"}
+	 *     )
+	 */
+	public function createRefundByAmount(Request $request, Context $context): Response
+	{
+		$salesChannelId   = $request->request->get('salesChannelId');
+		$transactionId    = $request->request->get('transactionId');
+		$refundableAmount = $request->request->get('refundableAmount');
+
+		$settings  = $this->settingsService->getSettings($salesChannelId);
+		$apiClient = $settings->getApiClient();
+
+		$transaction = $apiClient->getTransactionService()->read($settings->getSpaceId(), $transactionId);
+		$this->refundService->createRefundByAmount($transaction, $refundableAmount, $context);
+
+		return new Response(null, Response::HTTP_NO_CONTENT);
+	}
 }
