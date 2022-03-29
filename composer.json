@@ -20,22 +20,26 @@
         "description": {
             "de-DE": "TrustPayments integration f\u00fcr Shopware 6",
             "en-GB": "TrustPayments integration for Shopware 6",
-            "fr-Fr": "Int\u00e9gration de TrustPayments pour Shopware 6"
+            "fr-FR": "Int\u00e9gration de TrustPayments pour Shopware 6",
+            "it-IT": "Integrazione TrustPayments per Shopware"
         },
         "label": {
             "de-DE": "TrustPayments Produkte f\u00fcr Shopware 6",
             "en-GB": "TrustPayments Products for Shopware 6",
-            "fr-FR": "TrustPayments Produits for Shopware 6"
+            "fr-FR": "TrustPayments Produits for Shopware 6",
+            "it-IT": "TrustPayments Prodotti per Shopware 6"
         },
         "manufacturerLink": {
             "de-DE": "https://www.trustpayments.com/",
             "en-GB": "https://www.trustpayments.com/",
-            "fr-FR": "https://www.trustpayments.com/"
+            "fr-FR": "https://www.trustpayments.com/",
+            "it-IT": "https://www.trustpayments.com/"
         },
         "supportLink": {
             "de-DE": "https://www.trustpayments.com/contact-us/",
             "en-GB": "https://www.trustpayments.com/contact-us/",
-            "fr-FR": "https://www.trustpayments.com/"
+            "fr-FR": "https://www.trustpayments.com/contact-us/",
+            "it-IT": "https://www.trustpayments.com/contact-us/"
         },
         "shopware-plugin-class": "TrustPaymentsPayment\\TrustPaymentsPayment"
     },
@@ -58,5 +62,5 @@
         "trustpayments/sdk": "3.0.1"
     },
     "type": "shopware-platform-plugin",
-    "version": "4.0.27"
+    "version": "4.0.29"
 }

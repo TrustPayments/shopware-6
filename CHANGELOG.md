@@ -1,3 +1,11 @@
+# 4.0.29
+- Fix to hide birthdate field if it's already provided
+- Tested against SW v6.4.9.0
+
+# 4.0.28
+- Added italian translations
+- Tested against SW v6.4.9.0
+
 # 4.0.26
 - Added documentation around flow builder
 
