@@ -206,7 +206,7 @@ class TransactionPayload extends AbstractPayload
 	protected function getLineItems(): array
 	{
 		/**
-		 * @var \TrustPayments\Sdk\Model\LineItemCreate[] $lineItems
+		 * @var \Wallee\Sdk\Model\LineItemCreate[] $lineItems
 		 */
 		$lineItems = [];
 
