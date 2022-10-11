@@ -58,7 +58,7 @@ Component.register('trustpayments-order-detail', {
 		relatedResourceColumns() {
 			return [
 				{
-					property: 'paymentConnectorConfiguration.name',
+					property: 'paymentMethodName',
 					label: this.$tc('trustpayments-order.transactionHistory.types.payment_method'),
 					rawData: true
 				},
