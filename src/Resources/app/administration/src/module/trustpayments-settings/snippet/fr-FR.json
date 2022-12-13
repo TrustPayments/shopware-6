@@ -1,4 +1,14 @@
 {
+	"sw-privileges": {
+		"permissions": {
+			"parents": {
+				"trustpayments": "TrustPayments brancher"
+			},
+			"trustpayments": {
+				"label": "TrustPayments autorisations"
+			}
+		}
+	},
 	"trustpayments-settings": {
 	  "general": {
 		"descriptionTextModule": "Paramètres de TrustPayments",

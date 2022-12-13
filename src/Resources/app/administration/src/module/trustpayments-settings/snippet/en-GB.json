@@ -1,4 +1,14 @@
 {
+  "sw-privileges": {
+	"permissions": {
+	  "parents": {
+		"trustpayments": "TrustPayments plugin"
+	  },
+	  "trustpayments": {
+		"label": "TrustPayments permissions"
+	  }
+	}
+  },
   "trustpayments-settings": {
 	"general": {
 	  "descriptionTextModule": "TrustPayments settings",

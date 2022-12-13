@@ -40,7 +40,7 @@ class ConfigurationController extends AbstractController {
 	protected $logger;
 
 	/**
-	 * @var \WalleePayment\Core\Settings\Service\SettingsService
+	 * @var \TrustPaymentsPayment\Core\Settings\Service\SettingsService
 	 */
 	protected $settingsService;
 
