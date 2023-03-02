@@ -67,6 +67,7 @@
 					<template #actions="{ item }">
 						<sw-context-menu-item v-if="item.customerId">{{ $tc('trustpayments-order.transactionHistory.customerId') }}: {{ item.customerId }}</sw-context-menu-item>
 						<sw-context-menu-item v-if="item.customerName">{{ $tc('trustpayments-order.transactionHistory.customerName') }}: {{ item.customerName }}</sw-context-menu-item>
+						<sw-context-menu-item v-if="item.creditCardHolder">{{ $tc('trustpayments-order.transactionHistory.creditCardHolder') }}: {{ item.creditCardHolder }}</sw-context-menu-item>
 						<sw-context-menu-item v-if="item.paymentMethodName">{{ $tc('trustpayments-order.transactionHistory.paymentMethod') }}: {{ item.paymentMethodName }}</sw-context-menu-item>
 						<sw-context-menu-item v-if="item.brandName">{{ $tc('trustpayments-order.transactionHistory.paymentMethodBrand') }}: {{ item.brandName }}</sw-context-menu-item>
 						<sw-context-menu-item v-if="item.pseudoCardNumber">{{ $tc('trustpayments-order.transactionHistory.PseudoCreditCardNumber') }}: {{ item.pseudoCardNumber }}</sw-context-menu-item>
