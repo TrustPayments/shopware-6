@@ -43,7 +43,7 @@ Uncompress the zip file you download, and include the autoloader in your project
 
 ```bash
 # unzip to ShopwareInstallDir/custom/plugins/TrustPaymentsPayment
-composer require trustpayments/sdk 3.0.1
+composer require trustpayments/sdk 3.2.0
 php bin/console plugin:refresh
 php bin/console plugin:install --activate --clearCache TrustPaymentsPayment
 ```
@@ -61,7 +61,7 @@ tail -f var/log/trustpayments_payment*.log
 
 ## Documentation
 
-[Documentation](https://plugin-documentation.ep.trustpayments.com/TrustPayments/shopware-6/4.0.53/docs/en/documentation.html)
+[Documentation](https://plugin-documentation.ep.trustpayments.com/TrustPayments/shopware-6/4.0.54/docs/en/documentation.html)
 
 ## License
 

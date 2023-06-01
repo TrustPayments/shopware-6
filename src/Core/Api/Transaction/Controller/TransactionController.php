@@ -22,7 +22,7 @@ use TrustPaymentsPayment\{
  *
  * @package TrustPaymentsPayment\Core\Api\Transaction\Controller
  *
- * @RouteScope(scopes={"api"})
+ * @Route(defaults={"_routeScope"={"api"}})
  */
 class TransactionController extends AbstractController {
 

@@ -48,7 +48,7 @@ use TrustPaymentsPayment\Core\{
  *
  * @package TrustPaymentsPayment\Core\Api\WebHooks\Controller
  *
- * @RouteScope(scopes={"api"})
+ * @Route(defaults={"_routeScope"={"api"}})
  */
 class WebHookController extends AbstractController {
 

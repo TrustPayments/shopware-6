@@ -25,7 +25,7 @@ use TrustPaymentsPayment\Core\{
  * This class handles web calls that are made via the TrustPaymentsPayment settings page.
  *
  * @package TrustPaymentsPayment\Core\Api\Config\Controller
- * @RouteScope(scopes={"api"})
+ * @Route(defaults={"_routeScope"={"api"}})
  */
 class ConfigurationController extends AbstractController {
 

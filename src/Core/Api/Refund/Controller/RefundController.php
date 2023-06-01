@@ -20,7 +20,7 @@ use TrustPaymentsPayment\Core\{
  *
  * @package TrustPaymentsPayment\Core\Api\Refund\Controller
  *
- * @RouteScope(scopes={"api"})
+ * @Route(defaults={"_routeScope"={"api"}})
  */
 class RefundController extends AbstractController {
 

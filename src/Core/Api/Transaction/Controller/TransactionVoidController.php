@@ -19,7 +19,7 @@ use TrustPaymentsPayment\Core\Settings\Service\SettingsService;
  *
  * @package TrustPaymentsPayment\Core\Api\Transaction\Controller
  *
- * @RouteScope(scopes={"api"})
+ * @Route(defaults={"_routeScope"={"api"}})
  */
 class TransactionVoidController extends AbstractController {
 
