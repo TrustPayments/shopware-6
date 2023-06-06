@@ -1,0 +1,30 @@
+{% block trustpayments_order_action_refund %}
+<sw-modal variant="small"
+		  :title="$tc(`trustpayments-order.modal.title.refund`)"
+		  @modal-close="$emit('modal-close')">
+
+	{% block trustpayments_order_action_refund_amount %}
+
+		<sw-number-field v-model="refundQuantity"
+						 :max="this.$parent.refundableQuantity"
+						 :min="1"
+						 :label="$tc('trustpayments-order.refund.refundQuantity.label')">
+		</sw-number-field>
+
+		<div>
+			{{ $tc('trustpayments-order.refundAction.maxAvailableItemsToRefund') }}:
+			<b>{{ this.$parent.refundableQuantity }}</b>
+		</div>
+	{% endblock %}
+
+	{% block trustpayments_order_action_refund_confirm_button %}
+	<template #modal-footer>
+		<sw-button variant="primary" @click="refund()">
+			{{ $tc('trustpayments-order.refundAction.confirmButton.text') }}
+		</sw-button>
+	</template>
+	{% endblock %}
+
+	<sw-loader v-if="isLoading"></sw-loader>
+</sw-modal>
+{% endblock %}
